@@ -23,6 +23,10 @@ class TOONTANKS_API ATank : public ABasePawn
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	void HandleDestruciton();
+
+	APlayerController* GetTankPlayerController() const {return TankPlayerController;}
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -46,6 +50,6 @@ protected:
 	UPROPERTY(EditAnywhere, Category = "Movement")
 	float TurnRate = 45.0f;
 
-	APlayerController* PlayerControllerRef;
+	APlayerController* TankPlayerController;
 
 };
