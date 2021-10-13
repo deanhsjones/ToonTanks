@@ -49,7 +49,7 @@ void ATank::Tick(float DeltaTime)
     
 }
 
-void ATank::HandleDestruciton()
+void ATank::HandleDestruction()
 {
     Super::HandleDestruction();
     SetActorHiddenInGame(true);
